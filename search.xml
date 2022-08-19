@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>个人博客搭建流程</title>
+      <link href="/2022/08/19/%E6%90%AD%E5%BB%BA%E6%96%87%E7%AB%A0/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/"/>
+      <url>/2022/08/19/%E6%90%AD%E5%BB%BA%E6%96%87%E7%AB%A0/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="个人博客搭建流程"><a href="#个人博客搭建流程" class="headerlink" title="个人博客搭建流程"></a>个人博客搭建流程</h1><h2 id="必要环境配置"><a href="#必要环境配置" class="headerlink" title="必要环境配置"></a>必要环境配置</h2><h3 id="1、软件安装"><a href="#1、软件安装" class="headerlink" title="1、软件安装"></a>1、软件安装</h3><p><a href="https://git-scm.com/downloads">git</a>、<a href="https://nodejs.org/en/download/">node.js</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#检测是否安装成功，出现版本号则安装成功</span></span><br><span class="line">git --version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure><h3 id="2、Hexo安装"><a href="#2、Hexo安装" class="headerlink" title="2、Hexo安装"></a>2、Hexo安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo -v</span><br><span class="line"></span><br><span class="line"><span class="comment">#初始化</span></span><br><span class="line">hexo init</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"><span class="comment">#本地生成 查看效果</span></span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br><span class="line"><span class="comment">#执行完成之后，访问 http://localhost:4000/ 查看效果 </span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="/../../images/image-20220819140501350.png"></p><p><img src="/../../images/image-20220819142554440.png"></p><h2 id="将博客部署到Github-上面"><a href="#将博客部署到Github-上面" class="headerlink" title="将博客部署到Github 上面"></a>将博客部署到Github 上面</h2><h3 id="1、github配置"><a href="#1、github配置" class="headerlink" title="1、github配置"></a>1、github配置</h3><ol><li><p>创建项目，项目名称为用户名.github,io</p></li><li><p>配置本地ssh</p></li><li><p>修改目录下的_config.yml文件，repository修改为项目地址</p><p><img src="/../../images/image-20220819164711844.png" alt="image-20220819164711844"></p></li><li><p>执行hexo g -d，部署完成，访问链接为https:&#x2F;&#x2F;用户名.github.io&#x2F;</p></li></ol><h3 id="2、报错处理"><a href="#2、报错处理" class="headerlink" title="2、报错处理"></a>2、报错处理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;</span><span class="string">&#x27;报错 遇到部署完成之后，访问页面提示extends includes/layout.pug block content include ./includes/mixins/post-ui.pug #recent-posts.recent-posts +postUI include includes/pagination.pug&#x27;</span><span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="comment">#运行下方命令即可</span></span><br><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搭建流程 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>

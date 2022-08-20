@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>文章链接缩短配置</title>
+      <link href="/posts/f5fbdf5.html"/>
+      <url>/posts/f5fbdf5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="文章链接缩短配置"><a href="#文章链接缩短配置" class="headerlink" title="文章链接缩短配置"></a>文章链接缩短配置</h1><p>由于中文字符等的存在，默认配置下文章链接的长度过长，不够美观，进行配置之后，可以缩短文章链接长度，配置流程只需几分钟即可</p><h2 id="配置流程"><a href="#配置流程" class="headerlink" title="配置流程"></a>配置流程</h2><p>安装包</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><p>站点配置文件(_config.yml)修改</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://lyh02.top/</span></span><br><span class="line"><span class="comment">#修改字段</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">posts/:abbrlink.html</span> <span class="comment">#:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"><span class="attr">pretty_urls:</span></span><br><span class="line">  <span class="attr">trailing_index:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span></span><br><span class="line">  <span class="attr">trailing_html:</span> <span class="literal">true</span> <span class="comment"># Set to false to remove trailing &#x27;.html&#x27; from permalinks</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#新增字段</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">  <span class="attr">alg:</span> <span class="string">crc32</span>  <span class="comment"># 算法：crc16(default) and crc32</span></span><br><span class="line">  <span class="attr">rep:</span> <span class="string">hex</span>  <span class="comment">#hex or dec</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>编译即可</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搭建流程 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>图床配置</title>
       <link href="/posts/41cd470b.html"/>
       <url>/posts/41cd470b.html</url>

@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>图床配置</title>
+      <link href="/2022/08/20/%E6%90%AD%E5%BB%BA%E6%96%87%E7%AB%A0/%E5%9B%BE%E5%BA%8A%E9%85%8D%E7%BD%AE/"/>
+      <url>/2022/08/20/%E6%90%AD%E5%BB%BA%E6%96%87%E7%AB%A0/%E5%9B%BE%E5%BA%8A%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="图床配置（Typora-PicGo-Github-Jsdelivr）"><a href="#图床配置（Typora-PicGo-Github-Jsdelivr）" class="headerlink" title="图床配置（Typora+PicGo+Github+Jsdelivr）"></a>图床配置（Typora+PicGo+Github+Jsdelivr）</h1><h2 id="软件下载地址"><a href="#软件下载地址" class="headerlink" title="软件下载地址"></a>软件下载地址</h2><p>Typora:<a href="https://typoraio.cn/">https://typoraio.cn/</a></p><p>PicGo:<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p><h2 id="配置流程"><a href="#配置流程" class="headerlink" title="配置流程"></a>配置流程</h2><h3 id="Typora配置"><a href="#Typora配置" class="headerlink" title="Typora配置"></a>Typora配置</h3><p>在设置当中修改红框内容，路径更换为PicGo安装位置</p><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220820123101627.png" alt="image-20220820123101627"></p><h3 id="Github配置"><a href="#Github配置" class="headerlink" title="Github配置"></a>Github配置</h3><p>新建公开仓库</p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220820123316166.png" alt="image-20220820123316166" style="zoom:80%;" /><p>创建令牌，在setting中的Developer settings 新建Personal access tokens，为该令牌过期时间，看个人情况选择，生成完毕之后，复制下token</p><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220820123547280.png" alt="image-20220820123547280"></p><h3 id="PicGo配置"><a href="#PicGo配置" class="headerlink" title="PicGo配置"></a>PicGo配置</h3><p>仓库名为之前创建的仓库，格式为用户名&#x2F;仓库名</p><p>分支名一般为main</p><p>token填入上一步复制的token</p><p>存储路径一般为img&#x2F; 可以自行更改</p><p>自定义域名更换为 </p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/你的github用户名/你设置的仓库名@分支名</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220820123727516.png" alt="image-20220820123727516"></p><p>到此配置完成，复制图片到Typora当中时会自动上传到Github，并且替换相应的图片url</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搭建流程 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客主页github信息配置</title>
       <link href="/2022/08/19/%E6%90%AD%E5%BB%BA%E6%96%87%E7%AB%A0/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A1%B5github%E4%BF%A1%E6%81%AF%E9%85%8D%E7%BD%AE/"/>
       <url>/2022/08/19/%E6%90%AD%E5%BB%BA%E6%96%87%E7%AB%A0/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A1%B5github%E4%BF%A1%E6%81%AF%E9%85%8D%E7%BD%AE/</url>

@@ -31,3 +31,8 @@
 [data-theme="dark"] #page-header::before {
     background: transparent !important;
 }
+
+body,
+html {
+    cursor: url('/images/arrow.cur'), auto !important;
+}

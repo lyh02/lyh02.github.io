@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>scapy定制数据包进行高级扫描</title>
+      <link href="/posts/dad5e299.html"/>
+      <url>/posts/dad5e299.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="scapy定制数据包进行高级扫描"><a href="#scapy定制数据包进行高级扫描" class="headerlink" title="scapy定制数据包进行高级扫描"></a>scapy定制数据包进行高级扫描</h1><h2 id="ARP函数用法"><a href="#ARP函数用法" class="headerlink" title="ARP函数用法"></a>ARP函数用法</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">scpy进入工具  </span><br><span class="line">ARP().display() <span class="comment">#查看用法</span></span><br><span class="line">    </span><br><span class="line">  hwtype= <span class="number">0x1</span>  <span class="comment">#硬件类型</span></span><br><span class="line">  ptype= IPv4 <span class="comment">#协议类型</span></span><br><span class="line">  hwlen= <span class="literal">None</span> <span class="comment">#MAC地址长度</span></span><br><span class="line">  plen= <span class="literal">None</span> <span class="comment">#ip地址场地</span></span><br><span class="line">  op= who-has </span><br><span class="line">  hwsrc= <span class="number">00</span>:0c:<span class="number">29</span>:3c:<span class="number">99</span>:aa <span class="comment">#mac地址</span></span><br><span class="line">  psrc= <span class="number">192.168</span><span class="number">.163</span><span class="number">.131</span> <span class="comment">#ip地址</span></span><br><span class="line">  hwdst= <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span></span><br><span class="line">  pdst= <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span> <span class="comment">#目的ip地址</span></span><br></pre></td></tr></table></figure><h2 id="向指定ip发送arp包"><a href="#向指定ip发送arp包" class="headerlink" title="向指定ip发送arp包"></a>向指定ip发送arp包</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sr1(ARP(pdst=&quot;192.168.163.2&quot;))</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827131935472.png" alt="image-20220827131935472"></p><h2 id="定制ping包"><a href="#定制ping包" class="headerlink" title="定制ping包"></a>定制ping包</h2><p>查看ICMP包的格式</p><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827132110216.png" alt="image-20220827132110216"></p><p>查看IP包的格式</p><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827132716354.png" alt="image-20220827132716354"></p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sr1(IP(dst=&quot;192.168.163.2&quot;)/ICMP(),timeout=1)</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827133626364.png" alt="image-20220827133626364"></p><p>查看TCP包的格式</p><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827133805867.png" alt="image-20220827133805867"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>主动信息收集</title>
       <link href="/posts/dad5e299.html"/>
       <url>/posts/dad5e299.html</url>

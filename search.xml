@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>僵尸扫描</title>
+      <link href="/posts/1200b0ef.html"/>
+      <url>/posts/1200b0ef.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="僵尸扫描"><a href="#僵尸扫描" class="headerlink" title="僵尸扫描"></a>僵尸扫描</h1><h2 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h2><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827135047604.png" alt="image-20220827135047604"></p><h2 id="僵尸扫描的过程"><a href="#僵尸扫描的过程" class="headerlink" title="僵尸扫描的过程"></a>僵尸扫描的过程</h2><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827135413643.png" alt="image-20220827135413643"></p><p>如果最终IPID增加了2，那么目标主机的端口就是开放的，如果第三步中，只加了1，那么目标主机的目标端口就是关闭的</p><h2 id="僵尸扫描实战的命令"><a href="#僵尸扫描实战的命令" class="headerlink" title="僵尸扫描实战的命令"></a>僵尸扫描实战的命令</h2><p>由于暂无实验环境，因此只记录相应的命令</p><p>连续执行两次，可以检测该主机的IPID是否是递增1，是否符合僵尸主机的定义</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sr1(IP(dst=&quot;192.168.136.198&quot;)/TCP(dport=445,flags=&quot;SA&quot;))</span><br><span class="line">sr1(IP(dst=&quot;192.168.136.198&quot;)/TCP(dport=445,flags=&quot;SA&quot;))</span><br></pre></td></tr></table></figure><p>僵尸扫描流程</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sr1(IP(dst=&quot;192.168.136.198&quot;)/TCP(dport=445,flags=&quot;SA&quot;)) #和僵尸主机第一次通信 </span><br><span class="line">sr1(IP(src=&quot;192.168.136.198&quot;,dst=&quot;192.168.136.16&quot;)/TCP(dport=80),timeout=1)#伪装成僵尸主机和目标主机通信</span><br><span class="line">sr1(IP(dst=&quot;192.168.136.198&quot;)/TCP(dport=445,flags=&quot;SA&quot;))#和僵尸主机和第二次通信，此时可以检查IPID，从而判断目标主机的端口是否开放</span><br></pre></td></tr></table></figure><p>namp自带的僵尸扫描命令</p><p>查找僵尸主机</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap 192.168.1.0/24 -p1-1024  --script=ipidseq.nse</span><br></pre></td></tr></table></figure><p>测试目标主机端口是否开放</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap 【目标主机IP】 -sI 【僵尸主机IP】 -p 22,25,80,111</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>scapy定制数据包进行高级扫描</title>
       <link href="/posts/dad5e299.html"/>
       <url>/posts/dad5e299.html</url>

@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>kali虚拟机桥接模式设置</title>
+      <link href="/posts/ec148b2e.html"/>
+      <url>/posts/ec148b2e.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="kali虚拟机桥接模式设置"><a href="#kali虚拟机桥接模式设置" class="headerlink" title="kali虚拟机桥接模式设置"></a>kali虚拟机桥接模式设置</h1><h2 id="VMware设置"><a href="#VMware设置" class="headerlink" title="VMware设置"></a>VMware设置</h2><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827170802358.png" alt="image-20220827170802358" style="zoom: 80%;" /><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827170834732.png" alt="image-20220827170834732"></p><h2 id="Kali虚拟机设置"><a href="#Kali虚拟机设置" class="headerlink" title="Kali虚拟机设置"></a>Kali虚拟机设置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/network/interfaces</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827170950433.png" alt="image-20220827170950433"></p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827171052270.png" alt="image-20220827171052270"></p><p>然后重启即可，若出现域名解析失败，则为校园网问题，连接路由器或者使用手机热点即可解决</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>wireshark抓包</title>
+      <link href="/posts/ba03b3c9.html"/>
+      <url>/posts/ba03b3c9.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="wireshark抓包"><a href="#wireshark抓包" class="headerlink" title="wireshark抓包"></a>wireshark抓包</h1><h2 id="模式分类"><a href="#模式分类" class="headerlink" title="模式分类"></a>模式分类</h2><ul><li>普通模式，只接收发给本机的包</li><li>混杂模式，接收全部包</li><li>在wireshark 捕获选项当中修改</li></ul><h2 id="过滤器使用"><a href="#过滤器使用" class="headerlink" title="过滤器使用"></a>过滤器使用</h2><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827152449426.png" alt="image-20220827152449426"></p><p>复合查询</p><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827153008636.png" alt="image-20220827153008636"></p><h2 id="常用协议"><a href="#常用协议" class="headerlink" title="常用协议"></a>常用协议</h2><h3 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h3><p>2个包，一个发送一个返回，可以看见返回的包补全了mac地址</p><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827153849596.png" alt="image-20220827153849596"></p><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827153903156.png" alt="image-20220827153903156"></p><h3 id="ICMP协议"><a href="#ICMP协议" class="headerlink" title="ICMP协议"></a>ICMP协议</h3><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827154147639.png" alt="image-20220827154147639"></p><h3 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h3><p>三次握手和四次握手</p><h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><h2 id="MTR测试网络质量"><a href="#MTR测试网络质量" class="headerlink" title="MTR测试网络质量"></a>MTR测试网络质量</h2><p><img src="https://cdn.jsdelivr.net/gh/lyh02/images/img/image-20220827170310571.png" alt="image-20220827170310571"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>僵尸扫描</title>
       <link href="/posts/1200b0ef.html"/>
       <url>/posts/1200b0ef.html</url>

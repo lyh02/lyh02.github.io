@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>从数量最多的堆取走礼物</title>
+      <link href="/posts/86df9895.html"/>
+      <url>/posts/86df9895.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="2558-从数量最多的堆取走礼物"><a href="#2558-从数量最多的堆取走礼物" class="headerlink" title="2558. 从数量最多的堆取走礼物"></a>2558. 从数量最多的堆取走礼物</h1><p>题目连接<a href="https://leetcode.cn/problems/take-gifts-from-the-richest-pile/description/">https://leetcode.cn/problems/take-gifts-from-the-richest-pile/description/</a></p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">   <span class="keyword">public</span> <span class="type">long</span> <span class="title function_">pickGifts</span><span class="params">(<span class="type">int</span>[] gifts, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        PriorityQueue&lt;Integer&gt; q = <span class="keyword">new</span> <span class="title class_">PriorityQueue</span>&lt;&gt;(<span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(Integer o1, Integer o2)</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> o2-o1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i :gifts)&#123;</span><br><span class="line">            q.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;k;i++)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> q.poll();</span><br><span class="line">            temp = (<span class="type">int</span>) Math.sqrt(temp);</span><br><span class="line">            q.offer(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">long</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i : q)&#123;</span><br><span class="line">            res += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>恢复更新测试</title>
       <link href="/posts/2810411b.html"/>
       <url>/posts/2810411b.html</url>

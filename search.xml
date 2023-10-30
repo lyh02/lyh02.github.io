@@ -4,7 +4,26 @@
   
     
     <entry>
-      <title>从数量最多的堆取走礼物</title>
+      <title>H指数2</title>
+      <link href="/posts/b140b6fa.html"/>
+      <url>/posts/b140b6fa.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="274-H指数2"><a href="#274-H指数2" class="headerlink" title="274. H指数2"></a>274. H指数2</h1><p>题目连接<a href="https://leetcode.cn/problems/h-index-ii/description/">https://leetcode.cn/problems/h-index-ii/description/</a></p><p>题目要求对数时间，数组又是有序，所以是二分法</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">hIndex</span><span class="params">(<span class="type">int</span>[] citations)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> citations.length-<span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (left&lt;=right)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left+(right-left)/<span class="number">2</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> citations[mid];</span><br><span class="line">            <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> citations.length-mid;</span><br><span class="line">            res = Math.max(res,Math.min(temp,len));</span><br><span class="line">            <span class="keyword">if</span> (temp==len)&#123;</span><br><span class="line">                right = mid-<span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (temp&gt;len) &#123;</span><br><span class="line">                right = mid-<span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (temp&lt;len) &#123;</span><br><span class="line">                left = mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>H指数</title>
       <link href="/posts/86df9895.html"/>
       <url>/posts/86df9895.html</url>
       

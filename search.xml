@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>2586 统计范围内的元音字符串数</title>
+      <link href="/posts/8409a59e.html"/>
+      <url>/posts/8409a59e.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="2586-统计范围内的元音字符串数"><a href="#2586-统计范围内的元音字符串数" class="headerlink" title="2586. 统计范围内的元音字符串数"></a>2586. 统计范围内的元音字符串数</h1><p>题目连接<a href="https://leetcode.cn/problems/count-the-number-of-vowel-strings-in-range/">https://leetcode.cn/problems/count-the-number-of-vowel-strings-in-range/</a></p><p>没啥难度</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">vowelStrings</span><span class="params">(String[] words, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> left;i&lt;=right;i++)&#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> words[i];</span><br><span class="line">            <span class="keyword">if</span> (check(s.charAt(<span class="number">0</span>))&amp;&amp;check(s.charAt(s.length()-<span class="number">1</span>)))&#123;</span><br><span class="line">                res++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">check</span><span class="params">(<span class="type">char</span> c)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (c==<span class="string">&#x27;a&#x27;</span>||c==<span class="string">&#x27;e&#x27;</span>||c==<span class="string">&#x27;i&#x27;</span>||c==<span class="string">&#x27;o&#x27;</span>||c==<span class="string">&#x27;u&#x27;</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>H指数2</title>
       <link href="/posts/b140b6fa.html"/>
       <url>/posts/b140b6fa.html</url>

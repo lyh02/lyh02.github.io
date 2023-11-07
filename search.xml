@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>172 阶乘后的零</title>
+      <link href="/posts/25da18e4.html"/>
+      <url>/posts/25da18e4.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="172-阶乘后的零"><a href="#172-阶乘后的零" class="headerlink" title="172. 阶乘后的零"></a>172. 阶乘后的零</h1><p>题目连接<a href="https://leetcode.cn/problems/factorial-trailing-zeroes/">https://leetcode.cn/problems/factorial-trailing-zeroes/</a></p><p>从数学的角度出发，末尾要是0，那必然是有2和5相乘，而5的数量一定是比2小，所以我们只需计算出阶乘中5的数量即可</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">trailingZeroes</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (n&lt;=<span class="number">4</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span>[] cnt = <span class="keyword">new</span> <span class="title class_">int</span>[n+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">5</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (i%<span class="number">5</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                cnt[i] = cnt[i/<span class="number">5</span>]+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            res+=cnt[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>优化的做法</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">O(logn)，寻找因子<span class="number">5</span>的个数 = n/<span class="number">5</span> + n/<span class="number">5</span>^<span class="number">2</span> + n/<span class="number">5</span>^<span class="number">3</span> + ...</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2586 统计范围内的元音字符串数</title>
       <link href="/posts/8409a59e.html"/>
       <url>/posts/8409a59e.html</url>

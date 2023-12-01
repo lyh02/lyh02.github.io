@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>2661 找到叠涂元素</title>
+      <link href="/posts/848c0b8a.html"/>
+      <url>/posts/848c0b8a.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="2661-找到叠涂元素"><a href="#2661-找到叠涂元素" class="headerlink" title="2661. 找到叠涂元素"></a>2661. 找到叠涂元素</h1><p>题目连接<a href="https://leetcode.cn/problems/first-completely-painted-row-or-column/description/">https://leetcode.cn/problems/first-completely-painted-row-or-column/description/</a></p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">firstCompleteIndex</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span>[][] mat)</span> &#123;</span><br><span class="line">        HashMap&lt;Integer,<span class="type">int</span>[]&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">m</span> <span class="operator">=</span> mat.length;;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> mat[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt; m;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>;j&lt; n;j++)&#123;</span><br><span class="line">                <span class="type">int</span>[] temp = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">2</span>];</span><br><span class="line">                temp[<span class="number">0</span>] =i;</span><br><span class="line">                temp[<span class="number">1</span>] = j;</span><br><span class="line">                map.put(mat[i][j],temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span>[] row = <span class="keyword">new</span> <span class="title class_">int</span>[m];</span><br><span class="line">        <span class="type">int</span>[] col = <span class="keyword">new</span> <span class="title class_">int</span>[n];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">            <span class="type">int</span>[] temp = map.get(arr[i]);</span><br><span class="line">            <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> temp[<span class="number">0</span>];</span><br><span class="line">            <span class="type">int</span> y= temp[<span class="number">1</span>];</span><br><span class="line">            row[x]++;</span><br><span class="line">            <span class="keyword">if</span> (row[x]==n)&#123;</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">            col[y]++;</span><br><span class="line">            <span class="keyword">if</span> (col[y]==m)&#123;</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2609 最长平衡子字符串</title>
       <link href="/posts/93e15110.html"/>
       <url>/posts/93e15110.html</url>

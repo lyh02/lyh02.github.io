@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>1094 拼车</title>
+      <link href="/posts/3e986a94.html"/>
+      <url>/posts/3e986a94.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1094-拼车"><a href="#1094-拼车" class="headerlink" title="1094. 拼车"></a>1094. 拼车</h1><p>题目连接<a href="https://leetcode.cn/problems/car-pooling/description/">https://leetcode.cn/problems/car-pooling/description/</a></p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">carPooling</span><span class="params">(<span class="type">int</span>[][] trips, <span class="type">int</span> capacity)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] status = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">1001</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span>[] i :trips)&#123;</span><br><span class="line">            status[i[<span class="number">1</span>]] += i[<span class="number">0</span>];</span><br><span class="line">            status[i[<span class="number">2</span>]] -= i[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cnt</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i:status)&#123;</span><br><span class="line">            cnt+=i;</span><br><span class="line">            <span class="keyword">if</span> (cnt&gt;capacity)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2661 找到叠涂元素</title>
       <link href="/posts/848c0b8a.html"/>
       <url>/posts/848c0b8a.html</url>

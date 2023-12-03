@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>1423 可获得的最大点数</title>
+      <link href="/posts/dfc2eda4.html"/>
+      <url>/posts/dfc2eda4.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1423-可获得的最大点数"><a href="#1423-可获得的最大点数" class="headerlink" title="1423. 可获得的最大点数"></a>1423. 可获得的最大点数</h1><p>题目连接<a href="https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards/description/">https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards/description/</a></p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxScore</span><span class="params">(<span class="type">int</span>[] cardPoints, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> cardPoints.length;</span><br><span class="line">        <span class="type">int</span>[] left = <span class="keyword">new</span> <span class="title class_">int</span>[n+<span class="number">1</span>];</span><br><span class="line">        <span class="type">int</span>[] right = <span class="keyword">new</span> <span class="title class_">int</span>[n+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            left[i+<span class="number">1</span>] = left[i]+cardPoints[i];</span><br><span class="line">            right[i+<span class="number">1</span>] = right[i]+cardPoints[n-<span class="number">1</span>-i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;=k;i++)&#123;</span><br><span class="line">            res = Math.max(left[i]+right[k-i],res);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>tips：可以逆向思维，寻找最小的n-k；</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>1094 拼车</title>
       <link href="/posts/3e986a94.html"/>
       <url>/posts/3e986a94.html</url>

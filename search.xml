@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>1038 从二叉搜索树到更大和树</title>
+      <link href="/posts/848c0b8a.html"/>
+      <url>/posts/848c0b8a.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1038-从二叉搜索树到更大和树"><a href="#1038-从二叉搜索树到更大和树" class="headerlink" title="1038. 从二叉搜索树到更大和树"></a>1038. 从二叉搜索树到更大和树</h1><p>题目连接<a href="https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/description/">https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/description/</a></p><p>右中左遍历，这样子相当于降序遍历，使用sum记录遍历的值</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">public</span> TreeNode <span class="title function_">bstToGst</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (root==<span class="literal">null</span>) <span class="keyword">return</span> root;</span><br><span class="line">        bstToGst(root.right);</span><br><span class="line">        sum += root.val;</span><br><span class="line">        root.val = sum;</span><br><span class="line">        bstToGst(root.left);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 需复刷 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>1423 可获得的最大点数</title>
       <link href="/posts/dfc2eda4.html"/>
       <url>/posts/dfc2eda4.html</url>

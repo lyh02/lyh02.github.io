@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>博客github记录修复</title>
+      <link href="/posts/767947fc.html"/>
+      <url>/posts/767947fc.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="博客github记录修复"><a href="#博客github记录修复" class="headerlink" title="博客github记录修复"></a>博客github记录修复</h1><p>前几天发现博客的github记录挂了，无法加载</p><p><img src="https://raw.githubusercontent.com/lyh02/images/main/img/image-20240521140530714.png" alt="image-20240521140530714"></p><p>今天对其进行修复。</p><p>通过google查询发现是之前的api失效了，通过查询，现在选择通过部署自用的vercel api来修复。</p><p>相关的github仓库：<a href="https://github.com/Barry-Flynn/hexo-github-calendar">https://github.com/Barry-Flynn/hexo-github-calendar</a></p><p><a href="https://github.com/lyh02/python_github_calendar_api">https://github.com/lyh02/python_github_calendar_api</a></p><h2 id="自建api"><a href="#自建api" class="headerlink" title="自建api"></a>自建api</h2><p>在<a href="https://vercel.com/%E5%AE%98%E7%BD%91%E6%B3%A8%E5%86%8C%EF%BC%8C%E6%B3%A8%E5%86%8C%E5%AE%8C%E6%88%90%E4%B9%8B%E5%90%8E%E5%AF%BC%E5%85%A5https://github.com/lyh02/python_github_calendar_api">https://vercel.com/官网注册，注册完成之后导入https://github.com/lyh02/python_github_calendar_api</a></p><p>也可以先在github上fork，然后导入。</p><p><img src="https://raw.githubusercontent.com/lyh02/images/main/img/image-20240521141623444.png" alt="image-20240521141623444"></p><p>导入完成之后会自动进行部署。</p><p><img src="https://raw.githubusercontent.com/lyh02/images/main/img/image-20240521141910376.png" alt="image-20240521141910376"></p><p>测试地址：<a href="https://python-github-calendar-237ai7w8s-lyh02s-projects.vercel.app/api/?user=lyh02">https://python-github-calendar-237ai7w8s-lyh02s-projects.vercel.app/api/?user=lyh02</a></p><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>部署完成之后，发现报错500，查看日志：Vercel 无法导入 urllib3</p><p>解决方法：修改Node.js版本</p><p><img src="https://raw.githubusercontent.com/lyh02/images/main/img/image-20240521155121193.png" alt="image-20240521155121193"></p><p>然后重新部署</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搭建流程 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>吃掉 N 个橘子的最少天数</title>
+      <link href="/posts/f438ab1f.html"/>
+      <url>/posts/f438ab1f.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="吃掉-N-个橘子的最少天数"><a href="#吃掉-N-个橘子的最少天数" class="headerlink" title="吃掉 N 个橘子的最少天数"></a>吃掉 N 个橘子的最少天数</h1><p>我的做法，内存过大。</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minDays</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] res = <span class="keyword">new</span> <span class="title class_">int</span>[n+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            res[i] = res[i-<span class="number">1</span>]+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (i%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                res[i] = Math.min(res[i],res[i/<span class="number">2</span>]+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i%<span class="number">3</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                res[i] = Math.min(res[i],res[i/<span class="number">3</span>]+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>通过分析判断，要尽量进行操作2和操作3，得到以下解法。</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; memo = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Integer, Integer&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minDays</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (memo.containsKey(n)) &#123;</span><br><span class="line">            <span class="keyword">return</span> memo.get(n);</span><br><span class="line">        &#125;</span><br><span class="line">        memo.put(n, Math.min(n % <span class="number">2</span> + <span class="number">1</span> + minDays(n / <span class="number">2</span>), n % <span class="number">3</span> + <span class="number">1</span> + minDays(n / <span class="number">3</span>)));</span><br><span class="line">        <span class="keyword">return</span> memo.get(n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 需复刷 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>FM笔记</title>
       <link href="/posts/7fac8c17.html"/>
       <url>/posts/7fac8c17.html</url>

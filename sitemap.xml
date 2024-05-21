@@ -306,7 +306,7 @@
 
   
   <url>
-    <loc>https://lyh02.top/categories/FM/</loc>
+    <loc>https://lyh02.top/categories/web/</loc>
     <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -314,6 +314,13 @@
   
   <url>
     <loc>https://lyh02.top/categories/%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lyh02.top/categories/FM/</loc>
     <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -328,13 +335,6 @@
   
   <url>
     <loc>https://lyh02.top/categories/tool/</loc>
-    <lastmod>2024-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lyh02.top/categories/web/</loc>
     <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

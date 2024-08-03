@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>172 阶乘后的零</title>
+      <link href="/posts/25da18e4.html"/>
+      <url>/posts/25da18e4.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="编程语言基础"><a href="#编程语言基础" class="headerlink" title="编程语言基础"></a>编程语言基础</h1><p><a href="https://www.code-nav.cn/course/1789189862986850306/section/1789190431398928386?type=#heading-0">https://www.code-nav.cn/course/1789189862986850306/section/1789190431398928386?type=#heading-0</a></p><p>unicode码和ascii码gbk码</p><h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><ol><li><p>一个文件当中可以有多个main入口</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>回车符’\r’的使用——\r在java中是回车符的意思，将光标切换到当前行的开头</p></li><li><p>所有语言和计算器都遵循了尽量让商尽量靠近0 的原则</p></li><li><p>自增优先级计算</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    i = i++;</span><br><span class="line">    System.out.println(i);<span class="comment">//输出1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>属性没有重写之说，属性的值看编译类型，没有动态绑定机制</p></li><li><p>get</p></li><li></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客github记录修复</title>
       <link href="/posts/767947fc.html"/>
       <url>/posts/767947fc.html</url>
@@ -61,31 +80,6 @@
           
       </categories>
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数位DP</title>
-      <link href="/posts/a3781d1f.html"/>
-      <url>/posts/a3781d1f.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="数位DP"><a href="#数位DP" class="headerlink" title="数位DP"></a>数位DP</h1><p>参考资料：<a href="https://leetcode.cn/problems/count-special-integers/solutions/1746956/shu-wei-dp-mo-ban-by-endlesscheng-xtgx/">https://leetcode.cn/problems/count-special-integers/solutions/1746956/shu-wei-dp-mo-ban-by-endlesscheng-xtgx/</a> </p><img src="https://raw.githubusercontent.com/lyh02/images/main/img/image-20240116130539887.png" alt="image-20240116130539887" style="zoom:50%;" /><p>题目2376 统计特殊整数</p><p><a href="https://leetcode.cn/problems/count-special-integers/description/">https://leetcode.cn/problems/count-special-integers/description/</a></p><p>题目</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> leetcode </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数位DP </tag>
-            
-        </tags>
       
     </entry>
     
